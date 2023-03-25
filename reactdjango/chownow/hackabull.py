@@ -1,3 +1,6 @@
+import requests
+import creds
+import populartimes as pt
 
 #Uses populartimes Api and get's busy footprint on the longitude and latitude area
 def populartimes(longitude, latitude):
@@ -119,10 +122,34 @@ def listofplaces(quizResults):
             currentPlace5.goScore = currentPlace5.busyscale * 2 + currentPlace5.distance
         places.append(currentPlace5)
 
-    return places;
+    return places
 
 #Testing
+
 results = Results()
 results.american = True
 places = listofplaces(results)
 print(places[0].longitude)
+
+location = "location=-33.8670522%2C151.1957362"
+radius = "&radius=1500"
+type = "&type=restaurant"
+keyword = "&keyword=cruise"
+key = f"&key={creds.api_key}"
+
+url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
+url += location + radius + type + key
+print(url)
+
+payload={}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+place_id = "ChIJ6d4iYT-uEmsRzr2ghGVI_6s"
+
+print(response.text)
+
+placept = pt.get_id(creds.api_key, place_id)
+
+print(placept)
