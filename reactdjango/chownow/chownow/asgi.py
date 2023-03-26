@@ -1,16 +1,3 @@
-"""
-ASGI config for chownow project.
-
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.1/howto/deployment/asgi/
-"""
-
-import os
-
-from django.core.asgi import get_asgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chownow.settings')
-
-application = get_asgi_application()
+version https://git-lfs.github.com/spec/v1
+oid sha256:c483d79cd0a304551143108345577dafe6396ce68e563c6e2dc5c7b14b9cbc16
+size 391

@@ -1,15 +1,3 @@
-import React from "react";
-
-function CreateAccount() {
-
-    return (
-        <>
-            <h1>Create an account:</h1>
-            <form>
-                <input type='text'>howdy</input>
-            </form>
-        </>
-    )
-}
-
-export default CreateAccount;
+version https://git-lfs.github.com/spec/v1
+oid sha256:797f74e1aa5cd8b17180f4f11cbbd4109c6fda38f7ee74150d578c71b112d3cb
+size 307

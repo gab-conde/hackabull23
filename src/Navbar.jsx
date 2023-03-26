@@ -1,18 +1,3 @@
-import { findByText } from '@testing-library/react';
-import React from 'react';
-import { BrowswerRouter, Route, Link } from "react-router-dom";
-import './Navbar.css';
-
-function Navbar() {
-    return (
-        <nav className='navbar'>
-            <ul>
-                <li>
-                    <Link to="/">ChowNow</Link>
-                </li>
-            </ul>
-        </nav>
-    );
-}
-
-export default Navbar;
+version https://git-lfs.github.com/spec/v1
+oid sha256:56ac26a377ded598d1e949c346be7ede7dbddd89d7da9e2161bd1553c56c478d
+size 407
