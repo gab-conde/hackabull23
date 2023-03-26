@@ -1,13 +1,3 @@
-import React from "react";
-
-function Recommendations() {
-
-    return (
-        <div>
-            <h1>Your recommendations:</h1>
-			<div className='score-section'>You should go to Broward.</div>
-        </div>
-    )
-}
-
-export default Recommendations;
+version https://git-lfs.github.com/spec/v1
+oid sha256:04f7bc49831cba1e6ec0741e0b7ce41caf0bfbb9dcec247d40fc31ec050da9b9
+size 249

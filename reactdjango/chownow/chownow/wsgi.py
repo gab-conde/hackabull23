@@ -1,16 +1,3 @@
-"""
-WSGI config for chownow project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
-"""
-
-import os
-
-from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chownow.settings')
-
-application = get_wsgi_application()
+version https://git-lfs.github.com/spec/v1
+oid sha256:866820c816c2af6fdbee9d6cd86fa7bb23daf4f5b132fd87dba8aef1f5265d0d
+size 391
