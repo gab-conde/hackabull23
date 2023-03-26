@@ -1,0 +1,20 @@
+div {
+    display: block;
+    position: fixed;
+    top: 10vh;
+    width: 100vw;
+    font-size: 30px;
+}
+
+.question-count {
+    color:'black';
+}
+
+.prev {
+    justify-self: left;
+}
+
+button {
+    padding: 10;
+    margin: 10;
+}
