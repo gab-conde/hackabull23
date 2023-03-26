@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Button from "../PrevButton";
-import SubmitButton from '../PrevButton';
 
 function Quiz() {
 
