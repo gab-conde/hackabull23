@@ -1,0 +1,7 @@
+{
+  "name": "ChowNow",
+  "description": "A smart food recommendation app that balances your cravings with your schedule and travel preferences.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
