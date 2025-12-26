@@ -1,17 +1,38 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
+const functions = require("firebase-functions");
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
 
-dotenv.config({ path: ".env.local" });
+// Load environment variables if running locally
+dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Automatically allow cross-origin requests
+app.use(cors({ origin: true }));
 app.use(express.json());
 
-const PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY || process.env.API_KEY;
+
+// Helper to get key from Secret Manager (Prod) or .env (Local)
+const getApiKey = () => {
+  return (
+    process.env.GOOGLE_PLACES_API_KEY ||
+    process.env.API_KEY ||
+    process.env.VITE_GEMINI_API_KEY
+  );
+};
 
 // Endpoint to get restaurant photo
-app.post("/api/places/photo", async (req, res) => {
+app.post("/places/photo", async (req, res) => {
+  const PLACES_API_KEY = getApiKey();
+
+  if (!PLACES_API_KEY) {
+    console.error("[Backend] Missing API Key");
+    return res
+      .status(500)
+      .json({ error: "Server misconfiguration: No API Key" });
+  }
+
   try {
     const { placeName, address, location } = req.body;
 
@@ -71,10 +92,7 @@ app.post("/api/places/photo", async (req, res) => {
   }
 });
 
-const PORT = 3001;
-app.listen(PORT, () => {
-  console.log(`🚀 Backend proxy running on http://localhost:${PORT}`);
-  console.log(
-    `📸 Places API endpoint: http://localhost:${PORT}/api/places/photo`
-  );
-});
+// --- YOUR LOGIC ENDS HERE ---
+
+// Expose the Express app as a single Cloud Function: "api"
+exports.api = functions.https.onRequest(app);
