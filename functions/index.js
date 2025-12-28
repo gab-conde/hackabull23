@@ -12,11 +12,10 @@ const app = express();
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-
 // Helper to get key from Secret Manager (Prod) or .env (Local)
 const getApiKey = () => {
   return (
-    process.env.GOOGLE_PLACES_API_KEY ||
+    process.env.VITE_GOOGLE_PLACES_API_KEY ||
     process.env.API_KEY ||
     process.env.VITE_GEMINI_API_KEY
   );

@@ -94,7 +94,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 GEMINI_API_KEY=your_google_ai_key
 
 # Google Places API
-GOOGLE_PLACES_API_KEY=your_google_places_key
+VITE_GOOGLE_PLACES_API_KEY=your_google_places_key
 ```
 
 ### Running Locally
