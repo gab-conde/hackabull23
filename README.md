@@ -2,6 +2,8 @@
 
 ChowNow is an intelligent, AI-powered application that helps users find the perfect meal based on their specific context. Unlike standard map searches, ChowNow understands how you are traveling (walking, bus, driving) and what you are specifically craving, using Google Gemini to verify menus and provide personalized recommendations.
 
+Live demo here: [https://chownow-47c6a.web.app/](https://chownow-47c6a.web.app/)
+
 ## Features
 
 ### AI-Powered Recommendations
